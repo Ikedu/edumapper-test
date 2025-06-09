@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import ResultCard from '~/components/results/ResultCard.vue'
-import Button from '~/components/ui/Button.vue'
-import Pencil from '~/components/icons/Pencil.vue'
-import Plus from '~/components/icons/Plus.vue'
+import ResultCard from '@/components/results/ResultCard.vue'
+import Button from '@/components/ui/Button.vue'
+import Pencil from '@/components/icons/Pencil.vue'
+import Plus from '@/components/icons/Plus.vue'
 
-import {results as initialResults} from '~/data/mock'
-import {CHANCES_LEVELS} from '~/data/constants'
+import {results as initialResults} from '@/data/mock'
+import {CHANCES_LEVELS} from '@/data/constants'
 import type {AdmissionResult} from '@/types/AdmissionResult'
 
 const results = ref<AdmissionResult[]>([...initialResults])
@@ -18,7 +18,7 @@ const removeProgram = (id: number) => {
 <template>
   <div class="mx-auto sm:px-2 lg:px-0 lg:max-w-[720px]">
     <div>
-      <h2 class="text-[32px] font-semibold leading-[130%] text-[#1B1B1B]">
+      <h2 class="text-[32px] font-semibold leading-[130%] text-black">
         Tes chances d’admission aux formations
       </h2>
       <p class="mt-2 text-sm leading-[140%] font-light text-pretty text-[#646A81]">

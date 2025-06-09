@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {CLASS_TYPES, SCHOOL_CLASSES} from "~/data/constants";
+import {CLASS_TYPES, SCHOOL_CLASSES} from "@/data/constants";
 
 defineProps<{
   data: Record<string, unknown>;

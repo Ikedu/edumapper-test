@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import {computed} from 'vue'
-import Spinner from "~/components/icons/Spinner.vue";
+import Spinner from "@/components/icons/Spinner.vue";
 
 const props = withDefaults(
     defineProps<{

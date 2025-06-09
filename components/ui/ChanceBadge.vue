@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {CHANCES_LEVELS} from '~/data/constants'
+import {CHANCES_LEVELS} from '@/data/constants'
 
 type ChanceLevelType = keyof typeof CHANCES_LEVELS
 

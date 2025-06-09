@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import * as yup from 'yup'
-import Card from '~/components/ui/Card.vue'
-import Pencil from '~/components/icons/Pencil.vue'
-import Close from '~/components/icons/Close.vue'
-import Button from '~/components/ui/Button.vue'
+import Card from '@/components/ui/Card.vue'
+import Pencil from '@/components/icons/Pencil.vue'
+import Close from '@/components/icons/Close.vue'
+import Button from '@/components/ui/Button.vue'
 
 export type FormData = Record<string, unknown>
 

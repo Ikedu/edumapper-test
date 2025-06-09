@@ -2,12 +2,12 @@
 import {CHANCES_LEVELS} from '@/data/constants'
 import type {ChanceLevelType} from "@/types/ChanceLevel";
 
-import Close from '~/components/icons/Close.vue'
-import Pin from '~/components/icons/Pin.vue'
-import Chevron from '~/components/icons/Chevron.vue'
-import TrustStars from '~/components/ui/TrustStars.vue'
-import ChanceBadge from '~/components/ui/ChanceBadge.vue'
-import StatusScore from '~/components/ui/StatusScore.vue'
+import Close from '@/components/icons/Close.vue'
+import Pin from '@/components/icons/Pin.vue'
+import Chevron from '@/components/icons/Chevron.vue'
+import TrustStars from '@/components/ui/TrustStars.vue'
+import ChanceBadge from '@/components/ui/ChanceBadge.vue'
+import StatusScore from '@/components/ui/StatusScore.vue'
 
 const props = withDefaults(defineProps<{
   school: string

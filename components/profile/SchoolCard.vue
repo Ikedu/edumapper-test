@@ -1,8 +1,8 @@
-<script setup lang="ts">
-import MapPin from '~/components/icons/Pin.vue'
-import Building from '~/components/icons/Building.vue'
-import Card from '~/components/ui/Card.vue'
-import Button from '~/components/ui/Button.vue'
+<script lang="ts" setup>
+import MapPin from '@/components/icons/Pin.vue'
+import Building from '@/components/icons/Building.vue'
+import Card from '@/components/ui/Card.vue'
+import Button from '@/components/ui/Button.vue'
 
 const props = defineProps<{
   name: string
@@ -25,22 +25,22 @@ const handleEdit = () => emit('edit')
 
         <div class="flex flex-wrap items-center gap-4 text-sm text-white">
           <div class="flex items-center gap-1">
-            <MapPin class="w-4 h-4 text-white" />
+            <MapPin class="w-4 h-4 text-white"/>
             <span>{{ props.location }}</span>
           </div>
 
           <div class="flex items-center gap-1">
-            <Building class="w-4 h-4 text-white" />
+            <Building class="w-4 h-4 text-white"/>
             <span>{{ props.type }}</span>
           </div>
         </div>
       </div>
 
       <Button
-          variant="base"
-          size="sm"
-          @click="handleEdit"
           aria-label="Modifier l'établissement"
+          size="sm"
+          variant="base"
+          @click="handleEdit"
       >
         Modifier
       </Button>

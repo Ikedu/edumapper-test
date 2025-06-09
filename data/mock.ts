@@ -1,7 +1,7 @@
 import {CHANCES_LEVELS} from "@/data/constants";
 import type {School} from "@/types/School";
-import type {AdmissionResult} from "~/types/AdmissionResult";
-import type {ProfileCategory} from "~/types/Profile";
+import type {AdmissionResult} from "@/types/AdmissionResult";
+import type {ProfileCategory} from "@/types/Profile";
 
 export const school: School = {
     name: 'Lycée Gaston Berger',

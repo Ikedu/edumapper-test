@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {profileCategories, school} from "~/data/mock";
+import {profileCategories, school} from "@/data/mock";
 
 </script>
 
