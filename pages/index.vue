@@ -26,6 +26,12 @@ import {profileCategories, school} from "~/data/mock";
           />
         </template>
       </ProfileFormCard>
+
+      <div class="flex justify-center mt-10">
+        <NuxtLink to="/resultats">
+          <Button variant="black">Voir les résultats</Button>
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>
