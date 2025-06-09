@@ -1,5 +1,5 @@
 import type {ChanceLevelType} from "@/types/ChanceLevel";
-import type { SchoolClass, SchoolClassType, ClassCategory, ClassType } from '@/types/SchoolLevel'
+import type {SchoolClass, SchoolClassType, ClassCategory, ClassType} from '@/types/SchoolLevel'
 
 export const CHANCES_LEVELS: Record<ChanceLevelType, {
     key: ChanceLevelType
@@ -12,7 +12,7 @@ export const CHANCES_LEVELS: Record<ChanceLevelType, {
     VERY_HIGH: {
         key: 'VERY_HIGH',
         label: 'Très élevées',
-        color: 'bg-emerald-400',
+        color: 'bg-emerald-100',
         barColor: 'bg-emerald-400',
         textColor: 'text-emerald-500',
         level: 4,
@@ -20,7 +20,7 @@ export const CHANCES_LEVELS: Record<ChanceLevelType, {
     HIGH: {
         key: 'HIGH',
         label: 'Élevées',
-        color: 'bg-blue-400',
+        color: 'bg-blue-100',
         barColor: 'bg-blue-400',
         textColor: 'text-blue-500',
         level: 3,
@@ -28,7 +28,7 @@ export const CHANCES_LEVELS: Record<ChanceLevelType, {
     MEDIUM: {
         key: 'MEDIUM',
         label: 'Moyennes',
-        color: 'bg-purple-400',
+        color: 'bg-purple-100',
         barColor: 'bg-purple-400',
         textColor: 'text-purple-500',
         level: 2,
@@ -36,9 +36,9 @@ export const CHANCES_LEVELS: Record<ChanceLevelType, {
     LOW: {
         key: 'LOW',
         label: 'Faibles',
-        color: 'bg-orange-400',
-        barColor: 'bg-orange-400',
-        textColor: 'text-orange-500',
+        color: 'bg-orange-100',
+        barColor: 'bg-orange-300',
+        textColor: 'text-orange-400',
         level: 1,
     },
 }

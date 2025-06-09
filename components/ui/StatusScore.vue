@@ -18,7 +18,7 @@ const score = computed(() => {
     <div
         v-for="(isFilled, index) in score"
         :key="index"
-        class="flex-1 h-2 rounded-full overflow-hidden relative"
+        class="flex-1 h-[12px] rounded-full overflow-hidden relative"
     >
       <div
           :class="`${color}/10`"
