@@ -1,0 +1,24 @@
+@layer base {
+    body {
+        @apply bg-[#f7f3f0];
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+html {
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
+    overflow-y: hidden;
+}
+
+iframe {
+    border: none;
+}
