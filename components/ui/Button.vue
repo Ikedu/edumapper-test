@@ -1,10 +1,10 @@
-<script setup lang="ts">
-import { computed } from 'vue'
+<script lang="ts" setup>
+import {computed} from 'vue'
 import Spinner from "~/components/icons/Spinner.vue";
 
 const props = withDefaults(
     defineProps<{
-      variant?: 'primary' | 'secondary' | 'outline' | 'base'
+      variant?: 'primary' | 'secondary' | 'outline' | 'base' | 'grey' | 'black'
       size?: 'sm' | 'md' | 'lg'
       type?: 'button' | 'submit' | 'reset'
       disabled?: boolean
@@ -22,16 +22,20 @@ const props = withDefaults(
 )
 
 const baseClasses =
-    'inline-flex items-center justify-center font-medium rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed'
+    'inline-flex items-center justify-center font-medium rounded-full transition-colors cursor-pointer ' +
+    'focus:outline-none focus:ring-0 disabled:opacity-60 disabled:cursor-not-allowed'
 
 const variantClasses: Record<string, string> = {
   primary: 'bg-black text-white hover:bg-gray-800 focus:ring-gray-500',
-  secondary: 'bg-transparent text-[#1B1B1B] border border-[#646A81]',
+  secondary:
+      "bg-transparent text-black  border border-[#646A81] disabled:bg-gray-50",
   outline:
       'border border-gray-300 text-gray-500 hover:border-gray-400 hover:text-gray-600',
   ghost: 'bg-[#f7f3f0] text-black hover:bg-[#eae6e3]',
   base: 'bg-white text-black hover:bg-gray-100',
-  dark: 'bg-black text-white hover:bg-black/90',
+  black: 'bg-black text-white hover:bg-black/90',
+  grey: "bg-[#f7f3f0] text-black  disabled:bg-gray-100 disabled:text-gray-400",
+
 }
 
 const sizeClasses: Record<string, string> = {
@@ -58,19 +62,19 @@ defineOptions({
 
 <template>
   <button
-      :class="buttonClasses"
-      :type="props.type"
-      :disabled="props.disabled || props.loading"
       :aria-disabled="props.disabled || props.loading"
+      :class="buttonClasses"
+      :disabled="props.disabled || props.loading"
+      :type="props.type"
   >
     <div class="flex items-center justify-center gap-2 w-full h-full">
       <template v-if="props.loading">
         <Spinner/>
       </template>
       <template v-else>
-        <slot name="icon" />
+        <slot name="icon"/>
       </template>
-      <slot />
+      <slot/>
     </div>
   </button>
 </template>

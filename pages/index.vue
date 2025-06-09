@@ -1,5 +1,5 @@
-<script setup lang="ts">
-import {school} from "~/data/mock";
+<script lang="ts" setup>
+import {profileCategories, school} from "~/data/mock";
 
 </script>
 
@@ -7,10 +7,25 @@ import {school} from "~/data/mock";
   <div class="mx-auto">
     <div class="space-y-4">
       <SchoolCard
-          :name="school.name"
           :location="school.location"
+          :name="school.name"
           :type="school.type"
       />
+
+      <ProfileFormCard
+          v-for="category in profileCategories"
+          :key="`category-${category.id}`"
+          :disabled="category.id !== 1"
+          :title="category.title"
+      >
+        <template #default="{ data, updateData }">
+          <ClassForm
+              v-if="category.id === 1"
+              :data="data"
+              @update-data="(newData) => updateData(newData)"
+          />
+        </template>
+      </ProfileFormCard>
     </div>
   </div>
 </template>

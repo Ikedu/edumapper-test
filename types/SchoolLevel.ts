@@ -17,3 +17,5 @@ export interface ClassCategory {
     key: ClassType
     label: string
 }
+
+
