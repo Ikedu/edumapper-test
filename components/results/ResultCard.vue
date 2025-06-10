@@ -32,7 +32,8 @@ const toggleExpanded = () => {
   expanded.value = !expanded.value
 }
 
-const chanceLevelColor = computed(() => CHANCES_LEVELS[props.chanceLevel].barColor)
+const chanceLevelBarColor = computed(() => CHANCES_LEVELS[props.chanceLevel].barColor)
+const chanceLevelColor = computed(() => CHANCES_LEVELS[props.chanceLevel].color)
 </script>
 
 <template>
@@ -64,7 +65,7 @@ const chanceLevelColor = computed(() => CHANCES_LEVELS[props.chanceLevel].barCol
           <ChanceBadge :level="chanceLevel"/>
         </div>
 
-        <StatusScore :color="chanceLevelColor" :value="statusValue"/>
+        <StatusScore :bar-color="chanceLevelBarColor" :bg-color="chanceLevelColor" :value="statusValue"/>
         <button
             class="flex items-center text-black text-sm font-medium transition-transform duration-200"
             @click="toggleExpanded"
